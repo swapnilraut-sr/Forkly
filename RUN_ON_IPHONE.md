@@ -1,11 +1,17 @@
-# Running Forkly on an iPhone (Mac + free Apple ID)
+# Running Forkly on iOS (Mac)
 
-This guide gets **Forkly** running on a physical iPhone from a Mac, using a **free
-Apple ID** (no paid Apple Developer account needed).
+This guide gets **Forkly** running on iOS from a Mac — either in the **iOS
+Simulator** (easiest, no iPhone or Apple ID needed) or on a **physical iPhone**
+using a **free Apple ID** (no paid Apple Developer account needed).
+
+**Two ways to run:**
+- **Simulator** → just Steps 1–3, then `npm run ios`. Start here. ⭐
+- **Physical iPhone** → Steps 1–6 (adds free code signing + trusting the device).
 
 > ⚠️ **Important:** Forkly is a *bare* React Native app with a **native module**
 > (`@salesforce-personalization/react-native-personalization`). That means:
 > - **Expo Go does NOT work** — the app must be compiled natively in Xcode.
+>   (The iOS Simulator is fine — it runs real compiled code; Expo Go does not.)
 > - A **Mac is required** to build for iOS. Windows/Linux cannot build iOS apps.
 > - With a **free** Apple ID the installed app **expires after 7 days**. To keep
 >   using it, just re-run the build (Step 6) — it re-signs for another 7 days.
@@ -14,7 +20,45 @@ Apple ID** (no paid Apple Developer account needed).
 
 ---
 
-## What you'll do (overview)
+## ⭐ Easiest option: run in the iOS Simulator (no iPhone, no Apple ID)
+
+If you just want to **see and test the app on a Mac**, the Simulator is the
+simplest path — it skips code signing, the "trust developer" step, and the 7-day
+expiry entirely. You do **not** need a physical iPhone or an Apple ID.
+
+> **You don't install the Simulator separately** — it comes *with Xcode*. Doing
+> Step 1 below already installs it. (Only if you want an *older* iOS version do
+> you add a runtime via **Xcode → Settings → Components**.)
+
+Do these once: **Step 1** (install tools), **Step 2** (clone),
+**Step 3** (dependencies). Then, from the project root, run a single command:
+
+```sh
+npm run ios
+```
+
+That compiles the app, boots the iOS Simulator, and launches Forkly
+automatically. A **Metro** bundler window opens too — keep it running; your
+JavaScript/TypeScript edits **hot-reload instantly** in the simulator.
+
+To choose a specific device (optional):
+
+```sh
+npm run ios -- --simulator "iPhone 16 Pro"
+```
+
+List available simulators with `xcrun simctl list devices`.
+
+> The Salesforce personalization native module compiles for the Simulator just
+> like for a device — the Simulator runs real compiled iOS code (this is why
+> Expo Go can't run this app, but the Simulator can).
+
+**That's the whole simulator flow.** The rest of this guide (Steps 4–6) is only
+needed to run on a **physical iPhone**.
+
+---
+
+## What you'll do (overview) — physical iPhone
 
 1. Install the tools (Node, Watchman, Xcode, Ruby/CocoaPods) — **one time**.
 2. Clone the repo.
@@ -29,9 +73,10 @@ Steps 1 and 4 are the only fiddly parts; the rest is copy-paste.
 
 ## 0. Prerequisites
 
-- A **Mac** (macOS).
-- An **iPhone** + a **USB cable** to connect it to the Mac.
-- A free **Apple ID** (the one used for the App Store is fine).
+- A **Mac** (macOS) — required for all iOS builds.
+- *For the physical-iPhone path only:* an **iPhone** + **USB cable**, and a free
+  **Apple ID** (the one used for the App Store is fine). The Simulator needs
+  neither.
 
 ---
 
