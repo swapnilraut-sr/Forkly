@@ -1,6 +1,6 @@
-# Launch Forkly in the Android Emulator (Mac)
+# Launch Forkly on Android (Mac)
 
-No phone or GitHub account needed. Each step says how to skip it if already done. First-time setup and the first build are slow (large downloads; first build 10–20 min); later runs are fast.
+Steps 1–9 are the same whether you run in the **Emulator** (no phone needed) or on **your Android phone** — pick which at step 10. No GitHub account needed. First-time setup and the first build are slow (large downloads; first build 10–20 min); later runs are fast.
 
 **Terminal basics:** open with `Cmd+Space` → type `Terminal` → Return. Paste a command (`Cmd+V`), press Return, wait. `sudo` asks for your Mac password (no characters show — that's normal).
 
@@ -60,16 +60,31 @@ cd Forkly
 npm install
 ```
 
-### 10. Launch (emulator from step 7 must be running)
+### 10. Launch — pick one
+First build takes 10–20 min (normal). Forkly opens; leave the **Metro** window running.
+
+#### 10A. Run on the Emulator
+Make sure the virtual phone from step 7 is running, then:
 ```sh
 npm run android
 ```
-First build takes 10–20 min (normal). Forkly opens on the emulator. Leave the **Metro** window running.
+
+#### 10B. Run on your Android phone
+Needs a USB cable.
+1. On the phone: **Settings → About phone** → tap **Build number** 7 times to unlock Developer options.
+2. **Settings → System → Developer options** → turn on **USB debugging**.
+3. Plug the phone into the Mac; on the phone tap **Allow** for USB debugging.
+4. Confirm it's connected: `adb devices` (your phone should be listed).
+5. Launch:
+```sh
+npm run android
+```
 
 ---
 
 ### Next time
-Start the emulator (Android Studio → Device Manager → ▶), then:
+- **Emulator:** start it (Android Studio → Device Manager → ▶), then `npm run android`.
+- **Phone:** plug in (USB debugging on), then `npm run android`.
 ```sh
 cd ~/Documents/Forkly && npm run android
 ```
@@ -80,7 +95,8 @@ Code edits reload automatically on save.
 |---|---|
 | `command not found: brew` | Reopen Terminal. |
 | `SDK location not found` / `ANDROID_HOME` | Redo step 6, reopen Terminal. |
-| `No connected devices` | Start the emulator first (step 7). |
+| `No connected devices` | Start the emulator (step 7), or for a phone enable USB debugging + tap Allow (step 10B). |
+| Phone not shown by `adb devices` | Re-plug the cable, tap **Allow** on the phone, ensure USB debugging is on. |
 | Build fails on SDK 37 / build-tools / NDK | Install the exact versions in step 5 via SDK Manager. |
 | `port 8081 already in use` | Close the Metro window, re-run `npm run android`. |
 

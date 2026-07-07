@@ -1,11 +1,13 @@
 # Running Forkly
 
-Runs on your Mac in a simulated phone. No real device, no Apple/GitHub account, no coding needed.
+Runs on your Mac — in a simulated phone (no real device or accounts needed) or on your own phone. No GitHub account, no coding needed.
 
-Pick one:
+Pick your platform:
 
-- 📱 **[Launch on iOS Simulator](./LAUNCH_IOS.md)** — quickest on a Mac ⭐
-- 🤖 **[Launch on Android Emulator](./LAUNCH_ANDROID.md)**
+- 📱 **[Launch on iOS](./LAUNCH_IOS.md)** — Simulator (quickest ⭐) or your iPhone (free Apple ID)
+- 🤖 **[Launch on Android](./LAUNCH_ANDROID.md)** — Emulator or your Android phone
+
+Each guide shares the same setup, then branches: run in the simulator, or on your physical phone.
 
 First-time setup is mostly large downloads (allow 1–2 hrs). After that, launching takes under a minute.
 
