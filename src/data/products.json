@@ -1,0 +1,80 @@
+{
+  "_comment": "Source of truth for Forkly's catalog — a 1:1 mirror of the Data Cloud Goods Product export. To refresh, re-export from Data Cloud and overwrite `products`. `goodsProductId` is the backend catalog object id sent on product CatalogEvents / Cart / Order line items; everything else is display data. Restaurant grouping = category3; cuisine = primaryProductCategory; menu section = category2. See src/data/catalog.ts for how this is shaped into restaurants + menu items.",
+  "products": [
+    { "goodsProductId": "wwzh1yk63vml74a7st", "productName": "Truffle Beef Tartare", "cuisine": "Contemporary French", "category": "Appetizers", "restaurant": "L'Artiste Bistro", "photo": "photo-1511690656952-34342bb7c2f2", "price": 28 },
+    { "goodsProductId": "n5qzagh7ehoqsaq8js", "productName": "Pan-Seared Scallops", "cuisine": "Contemporary French", "category": "Appetizers", "restaurant": "L'Artiste Bistro", "photo": "photo-1532639113880-08a543b36df2", "price": 32 },
+    { "goodsProductId": "y1sy12pasda28zscwm", "productName": "48-Hour Wagyu Short Rib", "cuisine": "Contemporary French", "category": "Main Course", "restaurant": "L'Artiste Bistro", "photo": "photo-1544025162-d76694265947", "price": 54 },
+    { "goodsProductId": "3o0nhhvuutycmd59t1", "productName": "Roasted Duck Breast", "cuisine": "Contemporary French", "category": "Main Course", "restaurant": "L'Artiste Bistro", "photo": "photo-1559847844-5315695dadae", "price": 38 },
+    { "goodsProductId": "l0u7jz0jehfrz3ttgy", "productName": "Crème Brûlée", "cuisine": "Contemporary French", "category": "Desserts", "restaurant": "L'Artiste Bistro", "photo": "photo-1551024506-0bccd828d307", "price": 14 },
+
+    { "goodsProductId": "p9huqvdeh9sn7z9kcd", "productName": "Omakase Selection", "cuisine": "Authentic Japanese", "category": "Mains", "restaurant": "Komorebi Sushi", "photo": "photo-1553621042-f6e147245754", "price": 65 },
+    { "goodsProductId": "p6r5uqcs9vna9p7h19", "productName": "Spicy Blue Fin Tuna Roll", "cuisine": "Authentic Japanese", "category": "Rolls", "restaurant": "Komorebi Sushi", "photo": "photo-1579871494447-9811cf80d66c", "price": 22 },
+    { "goodsProductId": "lph42knibz89ejs79m", "productName": "Yellowtail Jalapeño", "cuisine": "Authentic Japanese", "category": "Appetizers", "restaurant": "Komorebi Sushi", "photo": "photo-1553621042-f6e147245754", "price": 28 },
+    { "goodsProductId": "27zsg9ar6rvitvls0i", "productName": "Chirashi Don", "cuisine": "Authentic Japanese", "category": "Mains", "restaurant": "Komorebi Sushi", "photo": "photo-1579871494447-9811cf80d66c", "price": 35 },
+
+    { "goodsProductId": "f2zl063kij830nydrr", "productName": "Dry-Aged Ribeye", "cuisine": "Steakhouse", "category": "Mains", "restaurant": "The Butcher's Table", "photo": "photo-1600891964599-f61ba0e24092", "price": 45 },
+    { "goodsProductId": "2v26gsbwfkbb3qj5ek", "productName": "Truffle Parmesan Fries", "cuisine": "Steakhouse", "category": "Sides", "restaurant": "The Butcher's Table", "photo": "photo-1573080496219-bb080dd4f877", "price": 12 },
+    { "goodsProductId": "73skw9dl4uj6uj3fpd", "productName": "Bone-In Tomahawk", "cuisine": "Steakhouse", "category": "Mains", "restaurant": "The Butcher's Table", "photo": "photo-1600891964599-f61ba0e24092", "price": 52 },
+    { "goodsProductId": "j9xzfce0yvr76la88j", "productName": "Wedge Salad", "cuisine": "Steakhouse", "category": "Appetizers", "restaurant": "The Butcher's Table", "photo": "photo-1546069901-ba9599a7e63c", "price": 16 },
+
+    { "goodsProductId": "kir3shxuc45z6sjfli", "productName": "Heirloom Burrata", "cuisine": "Plant-Based", "category": "Salads", "restaurant": "Verdant Kitchen", "photo": "photo-1512621776951-a57141f2eefd", "price": 24 },
+    { "goodsProductId": "ln2wfvcnayc8pe04cu", "productName": "Wild Mushroom Risotto", "cuisine": "Plant-Based", "category": "Mains", "restaurant": "Verdant Kitchen", "photo": "photo-1476124369491-e7addf5db371", "price": 28 },
+    { "goodsProductId": "mmegzqt26kespwlx6d", "productName": "Truffle Mushroom Flatbread", "cuisine": "Plant-Based", "category": "Mains", "restaurant": "Verdant Kitchen", "photo": "photo-1476124369491-e7addf5db371", "price": 22 },
+    { "goodsProductId": "mhr1a54769y8ahxqu9", "productName": "Rainbow Buddha Bowl", "cuisine": "Plant-Based", "category": "Bowls", "restaurant": "Verdant Kitchen", "photo": "photo-1512621776951-a57141f2eefd", "price": 18 },
+
+    { "goodsProductId": "qa1u4wvgst0v12s60t", "productName": "Dark Chocolate Fondant", "cuisine": "Desserts", "category": "Desserts", "restaurant": "Pâtisserie Royale", "photo": "photo-1563805042-7684c019e1cb", "price": 16 },
+    { "goodsProductId": "oitctpcg7ngsxaj419", "productName": "Raspberry Mille-Feuille", "cuisine": "Desserts", "category": "Desserts", "restaurant": "Pâtisserie Royale", "photo": "photo-1563805042-7684c019e1cb", "price": 18 },
+    { "goodsProductId": "wy7g59v6e2o2nk5syb", "productName": "Paris-Brest", "cuisine": "Desserts", "category": "Desserts", "restaurant": "Pâtisserie Royale", "photo": "photo-1488477181946-6428a0291777", "price": 14 },
+    { "goodsProductId": "lfvrfw60hzjsgkmgc5", "productName": "Croissant aux Amandes", "cuisine": "Desserts", "category": "Pastries", "restaurant": "Pâtisserie Royale", "photo": "photo-1587314168485-3236d6710814", "price": 12 },
+    { "goodsProductId": "3a1cyv5qfpwi86se1u", "productName": "Éclair au Chocolat", "cuisine": "Desserts", "category": "Pastries", "restaurant": "Pâtisserie Royale", "photo": "photo-1551024506-0bccd828d307", "price": 10 },
+
+    { "goodsProductId": "y0vvc62ndq1bqoujwe", "productName": "Margherita Classica", "cuisine": "Italian", "category": "Mains", "restaurant": "Napoli's Finest", "photo": "photo-1565299624946-b28f40a0ae38", "price": 18 },
+    { "goodsProductId": "lfsrs2nm7hlsx2usm9", "productName": "Truffle Quattro Formaggi", "cuisine": "Italian", "category": "Mains", "restaurant": "Napoli's Finest", "photo": "photo-1574071318508-1cdbab80d002", "price": 22 },
+    { "goodsProductId": "8vewqtlhjujljlyjev", "productName": "Burrata e Prosciutto", "cuisine": "Italian", "category": "Appetizers", "restaurant": "Napoli's Finest", "photo": "photo-1473093295043-cdd812d0e601", "price": 16 },
+    { "goodsProductId": "fits4zk4vjrjcxo1yy", "productName": "Tiramisu Tradizionale", "cuisine": "Italian", "category": "Desserts", "restaurant": "Napoli's Finest", "photo": "photo-1551183053-bf91a1d81141", "price": 14 },
+    { "goodsProductId": "lzxoux10ypd6tujfq5", "productName": "Arancini al Ragù", "cuisine": "Italian", "category": "Appetizers", "restaurant": "Napoli's Finest", "photo": "photo-1625938145312-a0cc22539026", "price": 12 },
+
+    { "goodsProductId": "nnn709nzqpezvl64xd", "productName": "Chef's Omakase 12-Piece", "cuisine": "Japanese", "category": "Mains", "restaurant": "Sakura Omakase", "photo": "photo-1579871494447-9811cf80d66c", "price": 48 },
+    { "goodsProductId": "ps9ifkq5gkjdil3irs", "productName": "Wagyu Tataki", "cuisine": "Japanese", "category": "Mains", "restaurant": "Sakura Omakase", "photo": "photo-1617196034183-421b4917c92d", "price": 26 },
+    { "goodsProductId": "a41m58nshylhvkh0os", "productName": "Edamame Truffle", "cuisine": "Japanese", "category": "Appetizers", "restaurant": "Sakura Omakase", "photo": "photo-1534256958597-7fe685cbd745", "price": 18 },
+    { "goodsProductId": "8w2lhnr1co96llt0td", "productName": "Dragon Roll", "cuisine": "Japanese", "category": "Rolls", "restaurant": "Sakura Omakase", "photo": "photo-1580822184713-fc5400e7fe10", "price": 22 },
+    { "goodsProductId": "burvxjzfutpotmhfho", "productName": "Matcha Mochi Ice Cream", "cuisine": "Japanese", "category": "Desserts", "restaurant": "Sakura Omakase", "photo": "photo-1551504734-5ee1c4a1479b", "price": 14 },
+
+    { "goodsProductId": "xvi8cbcvhaio084nu4", "productName": "Street Tacos al Pastor", "cuisine": "Mexican", "category": "Mains", "restaurant": "Casa del Sol", "photo": "photo-1565299585323-38d6b0865b47", "price": 14 },
+    { "goodsProductId": "38ndxb7wmdyesfseji", "productName": "Birria Quesadilla", "cuisine": "Mexican", "category": "Mains", "restaurant": "Casa del Sol", "photo": "photo-1599974579688-8dbdd335c77f", "price": 16 },
+    { "goodsProductId": "sxikkcsio8e0mwv9ev", "productName": "Guacamole Tableside", "cuisine": "Mexican", "category": "Appetizers", "restaurant": "Casa del Sol", "photo": "photo-1541529086526-db283c563270", "price": 12 },
+    { "goodsProductId": "6hnpfpqq7xqv427fqo", "productName": "Enchiladas Suizas", "cuisine": "Mexican", "category": "Mains", "restaurant": "Casa del Sol", "photo": "photo-1613514785940-daed07799d9b", "price": 18 },
+    { "goodsProductId": "2ya5bi8xoy80wqculs", "productName": "Churros con Chocolate", "cuisine": "Mexican", "category": "Desserts", "restaurant": "Casa del Sol", "photo": "photo-1551504734-5ee1c4a1479b", "price": 10 },
+
+    { "goodsProductId": "qtupyegao4vmiigsje", "productName": "Classic Smash Burger", "cuisine": "American", "category": "Mains", "restaurant": "The Stack House", "photo": "photo-1568901346375-23c9450c58cd", "price": 16 },
+    { "goodsProductId": "fks47ev0g2gfnwylvk", "productName": "Truffle Stack Burger", "cuisine": "American", "category": "Mains", "restaurant": "The Stack House", "photo": "photo-1594212699903-ec8a3eca50f5", "price": 18 },
+    { "goodsProductId": "stxyzmsnoni404fugo", "productName": "Loaded Stack Fries", "cuisine": "American", "category": "Sides", "restaurant": "The Stack House", "photo": "photo-1573080496219-bb080dd4f877", "price": 10 },
+    { "goodsProductId": "ks3qne1jf7ofvpv24x", "productName": "Craft Milkshake", "cuisine": "American", "category": "Drinks", "restaurant": "The Stack House", "photo": "photo-1572490122747-3968b75cc699", "price": 12 },
+    { "goodsProductId": "otgoggjpg4ror1k2d7", "productName": "Nashville Hot Chicken Sandwich", "cuisine": "American", "category": "Mains", "restaurant": "The Stack House", "photo": "photo-1586816001966-79b736744398", "price": 14 },
+
+    { "goodsProductId": "407hj6rqok52icmpc0", "productName": "Pad Thai Goong", "cuisine": "Thai", "category": "Mains", "restaurant": "Bangkok Bites", "photo": "photo-1562565652-a0d8f0c59eb4", "price": 18 },
+    { "goodsProductId": "hlf8eq7vz8x8x8l85g", "productName": "Green Curry Chicken", "cuisine": "Thai", "category": "Mains", "restaurant": "Bangkok Bites", "photo": "photo-1455619452474-d2be8b1e70cd", "price": 16 },
+    { "goodsProductId": "8ssm7cilb0hjhcyvjb", "productName": "Tom Yum Goong", "cuisine": "Thai", "category": "Appetizers", "restaurant": "Bangkok Bites", "photo": "photo-1569058242567-93de6f36f8e6", "price": 14 },
+    { "goodsProductId": "bzf7ke3dq0wsz40enl", "productName": "Drunken Noodles", "cuisine": "Thai", "category": "Mains", "restaurant": "Bangkok Bites", "photo": "photo-1562565652-a0d8f0c59eb4", "price": 15 },
+    { "goodsProductId": "j6m0cb7ynqf0fd5bi2", "productName": "Mango Sticky Rice", "cuisine": "Thai", "category": "Desserts", "restaurant": "Bangkok Bites", "photo": "photo-1604152135912-04a022e23696", "price": 8 },
+
+    { "goodsProductId": "fdcaxiczhds3ozjxs8", "productName": "Harvest Bowl", "cuisine": "Healthy", "category": "Bowls", "restaurant": "Green & Grain", "photo": "photo-1512621776951-a57141f2eefd", "price": 16 },
+    { "goodsProductId": "vsuziuhno126rbblq5", "productName": "Poke Power Bowl", "cuisine": "Healthy", "category": "Bowls", "restaurant": "Green & Grain", "photo": "photo-1546069901-ba9599a7e63c", "price": 18 },
+    { "goodsProductId": "1bmvc2sbtqdst8bbx0", "productName": "Mediterranean Grain Salad", "cuisine": "Healthy", "category": "Salads", "restaurant": "Green & Grain", "photo": "photo-1540914124281-342587941389", "price": 14 },
+    { "goodsProductId": "gb1lhgin48pu67nt3b", "productName": "Green Goddess Smoothie", "cuisine": "Healthy", "category": "Smoothies", "restaurant": "Green & Grain", "photo": "photo-1505576399279-0d06b7929ae9", "price": 12 },
+    { "goodsProductId": "l0pycook8b6a3p3bnj", "productName": "Roasted Cauliflower Steak", "cuisine": "Healthy", "category": "Bowls", "restaurant": "Green & Grain", "photo": "photo-1511690656952-34342bb7c2f2", "price": 15 }
+  ],
+  "restaurantMeta": {
+    "L'Artiste Bistro": { "rating": 4.9, "etaMinutes": 40, "deliveryFee": 4.99, "tags": ["French", "Fine Dining", "Wine"] },
+    "Komorebi Sushi": { "rating": 4.8, "etaMinutes": 35, "deliveryFee": 3.99, "tags": ["Sushi", "Omakase", "Sake"] },
+    "The Butcher's Table": { "rating": 4.7, "etaMinutes": 45, "deliveryFee": 4.49, "tags": ["Steak", "Grill", "Chops"] },
+    "Verdant Kitchen": { "rating": 4.6, "etaMinutes": 30, "deliveryFee": 2.99, "tags": ["Vegan", "Plant-Based", "Farm"] },
+    "Pâtisserie Royale": { "rating": 4.9, "etaMinutes": 25, "deliveryFee": 2.49, "tags": ["Pastries", "Desserts", "Coffee"] },
+    "Napoli's Finest": { "rating": 4.8, "etaMinutes": 28, "deliveryFee": 2.99, "tags": ["Pizza", "Pasta", "Wine"] },
+    "Sakura Omakase": { "rating": 4.7, "etaMinutes": 38, "deliveryFee": 3.99, "tags": ["Sushi", "Omakase", "Japanese"] },
+    "Casa del Sol": { "rating": 4.6, "etaMinutes": 22, "deliveryFee": 1.99, "tags": ["Tacos", "Margaritas", "Mexican"] },
+    "The Stack House": { "rating": 4.5, "etaMinutes": 20, "deliveryFee": 2.49, "tags": ["Burgers", "Shakes", "American"] },
+    "Bangkok Bites": { "rating": 4.7, "etaMinutes": 26, "deliveryFee": 2.99, "tags": ["Thai", "Noodles", "Curry"] },
+    "Green & Grain": { "rating": 4.6, "etaMinutes": 18, "deliveryFee": 2.49, "tags": ["Bowls", "Salads", "Healthy"] }
+  }
+}

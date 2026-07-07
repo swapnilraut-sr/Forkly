@@ -1,0 +1,31 @@
+buildscript {
+    ext {
+        buildToolsVersion = "36.0.0"
+        // Personalization SDK requires minSdk 26.
+        minSdkVersion = 26
+        // compileSdk 37 is required: the Personalization Android SDK 2.0.0 AAR
+        // declares minCompileSdk=37, so the host app must compile against API 37.
+        compileSdkVersion = 37
+        targetSdkVersion = 36
+        ndkVersion = "27.1.12297006"
+        // React Native 0.81 pins the Kotlin toolchain to 2.1.20, but the
+        // Personalization Android SDK 2.0.0 AAR is compiled with Kotlin 2.3.x
+        // (kotlin-stdlib 2.4.0). The 2.1.20 K2 frontend cannot read that newer
+        // binary metadata and crashes with "source must not be null" while
+        // analyzing the plugin's @ReactMethod-annotated Kotlin. Bumping the host
+        // app's Kotlin compiler to 2.4.x lets it read the SDK's metadata; newer
+        // compilers remain backward-compatible with RN's precompiled plugins.
+        kotlinVersion = "2.4.0"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.13.2")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"

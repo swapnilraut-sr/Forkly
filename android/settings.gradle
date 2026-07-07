@@ -1,0 +1,22 @@
+pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
+plugins { id("com.facebook.react.settings") }
+extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
+rootProject.name = 'Forkly'
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
+
+// The Salesforce Personalization plugin pulls in the Personalization Android SDK
+// (com.salesforce.personalization:sdk) transitively, along with its CDP + SFMC
+// dependencies. Those artifacts live on Salesforce's Maven repositories — not
+// Maven Central — and Gradle does not resolve repositories transitively, so the
+// host app must declare them itself.
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://salesforce-marketingcloud.github.io/MarketingCloudSDK-Android/repository" }
+        maven { url "https://salesforce-marketingcloud.github.io/mobile-sdk-cdp-android/repository" }
+        maven { url "https://salesforce-marketingcloud.github.io/Personalization-Android/repository" }
+    }
+}

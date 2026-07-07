@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme"
+      android:supportsRtl="true">
+
+      <!-- ================================================================ -->
+      <!-- Salesforce Personalization SDK configuration.                    -->
+      <!-- The host app owns native SDK init (no JS-side configure()).      -->
+      <!-- These values are read in MainApplication.kt at launch. Obtain    -->
+      <!-- them from your SFMC administrator; a production app should not    -->
+      <!-- commit real credentials.                                         -->
+      <!-- ================================================================ -->
+      <meta-data android:name="com.salesforce.personalization.CDP_APP_ID"
+        android:value="3f73fa6e-9382-494a-bdb8-958f379b038a" />
+      <meta-data android:name="com.salesforce.personalization.CDP_ENDPOINT"
+        android:value="gmytgzbsh0zdqmtcgbsgmztdgm.c360a.salesforce.com" />
+      <meta-data android:name="com.salesforce.personalization.DATASPACE"
+        android:value="default" />
+      <meta-data android:name="com.salesforce.personalization.CDN_URL"
+        android:value="https://cdn.c360a.salesforce.com/beacon/module_configuration/3f73fa6e-9382-494a-bdb8-958f379b038a/config/app-config.json" />
+
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <!-- Deep links used to forward Personalization preview links to the   -->
+        <!-- SDK, e.g. forkly://preview?sfp-preview=... or                     -->
+        <!-- personalizationdemo://preview?sfp-preview=... (the scheme used by -->
+        <!-- the Personalization preview QR codes).                           -->
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="forkly" />
+            <data android:scheme="personalizationdemo" />
+        </intent-filter>
+      </activity>
+    </application>
+</manifest>
